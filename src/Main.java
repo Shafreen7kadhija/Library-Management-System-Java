@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
+        Library library = new Library();
 
         while (true) {
 
@@ -24,11 +25,28 @@ public class Main {
             switch (choice) {
 
                 case 1:
-                    System.out.println("Add Book selected.");
+
+                    scanner.nextLine(); // Clear buffer
+
+                    System.out.print("Enter Book ID: ");
+                    int id = scanner.nextInt();
+                    scanner.nextLine();
+
+                    System.out.print("Enter Book Title: ");
+                    String title = scanner.nextLine();
+
+                    System.out.print("Enter Author Name: ");
+                    String author = scanner.nextLine();
+
+                    Book book = new Book(id, title, author);
+
+                    library.addBook(book);
+
                     break;
 
                 case 2:
-                    System.out.println("View Books selected.");
+
+                    library.viewBooks();
                     break;
 
                 case 3:

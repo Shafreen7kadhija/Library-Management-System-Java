@@ -50,15 +50,22 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.println("Search Book selected.");
+
+                    System.out.print("Enter Book ID to search: ");
+                    int searchId = scanner.nextInt();
+                    library.searchBook(searchId);
                     break;
 
                 case 4:
-                    System.out.println("Borrow Book selected.");
+                    System.out.print("Enter Book ID to borrow: ");
+                    int borrowId = scanner.nextInt();
+                    library.borrowBook(borrowId);
                     break;
 
                 case 5:
-                    System.out.println("Return Book selected.");
+                    System.out.print("Enter Book ID to return: ");
+                    int returnId = scanner.nextInt();
+                    library.returnBook(returnId);
                     break;
 
                 case 6:
